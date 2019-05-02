@@ -1,0 +1,26 @@
+1> c("jug_statem.erl").
+{ok,jug_statem}
+
+
+2> jug_statem:test(100).
+....................................................................................................
+OK: Passed 100 test(s).
+
+18% {jug_statem,fill_big,0}
+17% {jug_statem,big_to_small,0}
+16% {jug_statem,empty_small,0}
+16% {jug_statem,fill_small,0}
+15% {jug_statem,small_to_big,0}
+15% {jug_statem,empty_big,0}
+true
+
+3> jug_statem:test(1000).
+.....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................!
+Failed: After 646 test(s).
+...
+Shrinking .....(5 time(s))
+[{set,{var,16},{call,movie_statem,fill_big,[]}},{set,{var,18},{call,movie_statem,big_to_small,[]}},{set,{var,20},{call,movie_statem,empty_small,[]}},{set,{var,21},{call,movie_statem,big_to_small,[]}},{set,{var,25},{call,movie_statem,fill_big,[]}},{set,{var,26},{call,movie_statem,big_to_small,[]}},{set,{var,27},{call,movie_statem,small_to_big,[]}}]
+History: [{{state,0,0},ok},{{state,0,5},ok},{{state,3,2},ok},{{state,0,2},ok},{{state,2,0},ok},{{state,2,5},ok},{{state,3,4},ok}]
+State: {state,3,4}
+Result: {postcondition,false}
+false
